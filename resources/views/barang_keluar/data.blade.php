@@ -22,19 +22,19 @@
                     </thead>
                     <tbody>
                         <?php
-                        $nomor = 1;
-                        foreach ($data as $x) { ?>
-                            <tr class="text-center">
-                                <td>{{ $nomor++ }}</td>
-                                <td>{{ $x->stok_gudang->nama }}</td>
-                                <td>{{ $x->stok_gudang->deskripsi }}</td>
-                                <td>{{ $x->jumlah }}</td>
-                                <td>{{ date('d-m-Y', strtotime($x->created_at)) }}</td>
-                                <td align="center">
-                                    <a href="{{ url('barang_keluar/delete', $x->id) }}" onclick="return confirm('Yakin Hapus?')" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></a>
-                                </td>
-                            </tr>
-                        <?php } ?>
+                            $nomor = 1;
+                            foreach ($data as $x) { ?>
+                                <tr class="text-center">
+                                    <td>{{ $nomor++ }}</td>
+                                    <td>{{ $x->stok_gudang->nama }}</td>
+                                    <td>{{ $x->stok_gudang->deskripsi }}</td>
+                                    <td>{{ $x->jumlah }}</td>
+                                    <td>{{ date('d-m-Y', strtotime($x->created_at)) }}</td>
+                                    <td align="center">
+                                        <a href="{{ url('barang_keluar/delete', $x->id) }}" onclick="return confirm('Yakin Hapus?')" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                                    </td>
+                                </tr>
+                            <?php } ?>
                     </tbody>
                 </table>
             </div>
